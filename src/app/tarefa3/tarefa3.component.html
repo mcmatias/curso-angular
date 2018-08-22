@@ -1,0 +1,8 @@
+<button 
+    class="btn btn-primary"
+    (click)="onDisplayDetails()">Display Details</button>
+    <hr>
+<p *ngIf="visible">Bolt up!</p>
+<p  *ngFor="let logItem of log"
+    [ngStyle]="{backgroundColor : logItem >= 5 ? 'blue' : 'transparent'}" 
+    [ngClass]="{'white-text': logItem >= 5}">{{ logItem }}</p>
