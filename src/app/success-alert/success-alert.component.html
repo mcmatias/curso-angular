@@ -1,0 +1,8 @@
+<h3>Here the message is displayed while I type</h3>
+<input
+    type = "text"
+    class = "form-control"
+    [(ngModel)]="successAlertMsg">  <!--two way data binding-->
+<h3>{{ successAlertMsg }}</h3>
+<!-- Nesse component, tudo que for digitado no input, 
+é automaticamente impresso no h3 abaixo dele-->

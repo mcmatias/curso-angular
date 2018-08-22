@@ -1,0 +1,16 @@
+<h3>Here the message only is displayed when I click the button</h3>
+<input
+    type = "text"
+    class = "form-control"
+    [(ngModel)]="msgTyped">
+    <br>
+<button 
+    class="btn btn-primary"
+    [disabled]="(msgTyped.length==0)"
+    (click)="onConfirmWarningMsg()">Confirm Message</button>
+<h3>{{ warningAlertMsg }}</h3>
+<!-- Esse componente tem a seguinte funcionalidade:
+    Enquanto nada tiver sido digitado no input,
+    o botao "Confirm Message" fica disabled.
+Assim que alguma coisa for digitad, esse botao fica enabled e quando clicado
+o valor digitado é impresso no h3 logo abaixo do button-->
